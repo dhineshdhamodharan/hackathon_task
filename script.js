@@ -1,7 +1,7 @@
 async function getProductType() {
   try {
     const data = await fetch(
-      "http://makeup-api.herokuapp.com/api/v1/products.json",
+      "https://makeup-api.herokuapp.com/api/v1/products.json",
       {
         method: "GET",
       }
@@ -50,7 +50,7 @@ async function displayItems(productType) {
     document.querySelector(".image-list").remove();
   }
   const data = await fetch(
-    `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`,
+    `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`,
     {
       method: "GET",
     }
@@ -69,7 +69,7 @@ async function getProductListsByBrand() {
   const brand_name = document.querySelector(".search").value;
   // API to get the item details by brand
   const data = await fetch(
-    `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand_name}`,
+    `https://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand_name}`,
     {
       method: "GET",
     }
